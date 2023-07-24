@@ -1,7 +1,7 @@
 # ywtools
 #User:zhangshiqi
 ###########################
-#version=1.14.3
+#version=1.14.6
 
 #增加了SMTP配置
 #修改一些脚本文件
