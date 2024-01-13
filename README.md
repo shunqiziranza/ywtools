@@ -1,8 +1,48 @@
 # ywtools
-#User:zhangshiqi
-###########################
-#version=1.14.6
-
+已测试系统:
+        centos7
+        centos8
+        centos steam8
+        centos steam9
+        rocky 8
+        rocky 9
+        AlmaLinux 8.2/8.4
+        AlmaLinux 9.0
+备注:linux运维工具
+#############################################################################################################
+ NAME: 
+	ywtool - Yunwei tool
+        
+ AGE: 
+	ywtool [global options] command [command options] [arguments...]
+        
+ VERSION: 
+	v1.16.30  2024年 01月 13日 星期六 23:43:19 CST 
+        
+ COMMANDS: 
+	install													install service
+	blj													跳板机模式配置
+	mail													SMTP配置
+	vsftp													VSFTP配置
+	account													账号策略配置
+	backup													备份工具
+	remove													移除工具
+	dhcp    [config]											DHCP配置
+	security baseline											安全基线
+	access  { white  | black }										黑白名单访问配置
+	inspect { daily  | weekly }										巡检配置
+	ssh	[ config | peer [IP] ]										SSH密钥登陆
+	clean	{ log  | cache | journal }									清理日志
+	jiagu	{ auto | shell | single }									安全加固
+	network	{ ip   | br  | ovs  | bond }									配置网卡
+	check	[ -I   | all | io   | elk | php | mysql | nginx | system | docker_nbip ]			检查已安装软件的版本
+	disable { ssh  | blj | mail | vsftp | shell | white | black | daily | weekly | -h | ... }		关闭功能
+	
+ GLOBAL OPTIONS::
+	--help,-h												查看帮助
+	--tail [COMMANDS]											查看日志
+	--history												回放跳板机当天运维主机的操作记录
+#############################################################################################################
 #增加了SMTP配置
 #修改一些脚本文件
 
@@ -56,3 +96,4 @@
 #调整加固shell退出后进程依然存在问题
 #调整日巡检登陆次数和防火墙默认区域配置文件
 ###########################
+mail:1843929213@qq.com
