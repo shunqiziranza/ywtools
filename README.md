@@ -17,7 +17,7 @@
 	ywtool [global options] command [command options] [arguments...]
         
  VERSION: 
-	v1.16.30  2024年 01月 13日 星期六 23:43:19 CST 
+	v1.16.30 
         
  COMMANDS: 
 	install													install service
