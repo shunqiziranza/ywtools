@@ -1,36 +1,36 @@
 version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=" '{print $NF}'`
 ## 已测试系统(x86_64):
--       Rocky 8
--       Rocky 9
--       CentOS 7
--       CentOS 8
--       CentOS Steam 8
--       CentOS Steam 9
--       AlmaLinux 8.2/8.4
--       AlmaLinux 9.0/9.3
--       OpenCloudOS 8.8(腾讯,类似centos8,软件包是oc8.x86_64)
--       AnolisOS 8.6/8.8(龙蜥,兼容centos8生态,软件包是an8.x86_64)
--       openEuler 20.03-LTS-SP3(华为,类似centos8,软件包是oe1.x86_64)
--       openEuler 22.03-LTS-SP1
--       Huawei Cloud EulerOS 2.0(华为,类似centos8,软件包是hce2.x86_64)
--       BigCloud Enterprise Linux 7.1/7.4/7.5/7.6/7.7/7.8(移动,类似centos7,软件包是el7.x86_64)
--       BigCloud Enterprise Linux 8.1/8.2/8.4/8.6(移动,类似centos8,软件包是el8.x86_64)
--       BigCloud Enterprise Linux 20.10/22.10(移动,类似centos8,软件包是oe2203.x86_64)
+- Rocky 8
+- Rocky 9
+- CentOS 7
+- CentOS 8
+- CentOS Steam 8
+- CentOS Steam 9
+- AlmaLinux 8.2/8.4
+- AlmaLinux 9.0/9.3
+- OpenCloudOS 8.8(腾讯,类似centos8,软件包是oc8.x86_64)
+- AnolisOS 8.6/8.8(龙蜥,兼容centos8生态,软件包是an8.x86_64)
+- openEuler 20.03-LTS-SP3(华为,类似centos8,软件包是oe1.x86_64)
+- openEuler 22.03-LTS-SP1
+- Huawei Cloud EulerOS 2.0(华为,类似centos8,软件包是hce2.x86_64)
+- BigCloud Enterprise Linux 7.1/7.4/7.5/7.6/7.7/7.8(移动,类似centos7,软件包是el7.x86_64)
+- BigCloud Enterprise Linux 8.1/8.2/8.4/8.6(移动,类似centos8,软件包是el8.x86_64)
+- BigCloud Enterprise Linux 20.10/22.10(移动,类似centos8,软件包是oe2203.x86_64)
 ## 备注:
-1.      [AlmaLinux 8]、[CentOS Steam 8]、[Rocky 8]、[AnolisOS 8]、[BCLinux 8]等系统yum没有ntp软件包
-2.      [AnolisOS 8]、[HCEulerOS 2.0]、[BCLinux 7/8]等系统无法安装rabbtimq(官网的安装脚本无法识别此系统)
-3.      [HCEulerOS 2.0]、[BCLinux 20.10/22.10]、[openEuler 20.03-LTS-SP3/22.03-LTS-SP1]等系统yum没有nmap-ncat(nc命令在nmap软件包)、epel-release这几个软件包
-4.      [HCEulerOS 2.0]、[BCLinux 20.10/22.10]、[openEuler 20.03-LTS-SP3/22.03-LTS-SP1]等系统没有redhat-release文件
-5.      [HCEulerOS 2.0]系统yum没有libvirt软件包
-6.      [BCLinux 8]系统yum没有libvirt软件包、安装ovs编译报错
-7.      [BCLinux 22.10]系统中filebeat启动有问题,和系统有关系
-8.      linux运维工具,只测试过x86_64,未测试过aarch64
-9.      工具功能介绍:https://blog.csdn.net/ShunqiziranZ/article/details/135844875
+1. [AlmaLinux 8]、[CentOS Steam 8]、[Rocky 8]、[AnolisOS 8]、[BCLinux 8]等系统yum没有ntp软件包
+2. [AnolisOS 8]、[HCEulerOS 2.0]、[BCLinux 7/8]等系统无法安装rabbtimq(官网的安装脚本无法识别此系统)
+3. [HCEulerOS 2.0]、[BCLinux 20.10/22.10]、[openEuler 20.03-LTS-SP3/22.03-LTS-SP1]等系统yum没有nmap-ncat(nc命令在nmap软件包)、epel-release这几个软件包
+4. [HCEulerOS 2.0]、[BCLinux 20.10/22.10]、[openEuler 20.03-LTS-SP3/22.03-LTS-SP1]等系统没有redhat-release文件
+5. [HCEulerOS 2.0]系统yum没有libvirt软件包
+6. [BCLinux 8]系统yum没有libvirt软件包、安装ovs编译报错
+7. [BCLinux 22.10]系统中filebeat启动有问题,和系统有关系
+8. linux运维工具,只测试过x86_64,未测试过aarch64
+9. 工具功能介绍:https://blog.csdn.net/ShunqiziranZ/article/details/135844875
 - #############################################################################################################
 ## 未完成:
-1.      安全基线
-2.      将文本文件生成pdf文件脚本
-3.      集成一些安全工具
+1. 安全基线
+2. 将文本文件生成pdf文件脚本
+3. 集成一些安全工具
 - #############################################################################################################
 ## 2023.2.18之前
 1. 增加了SMTP配置
@@ -116,9 +116,9 @@ version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=
 2. 增加vsftp、shell、mail、ssh、dhcp开启服务后,输出都修改了哪些系统文件
 3. 增加blj添加和删除运维IP
 4. 修改install-yw.sh、install-low.sh
--       #install_ovs、install_rabbitmq、install_erlang.sh:安装前提前备份系统文件
--       #check.sh、check_copy.sh:服务检查的方式修改
--       #daily_check.sh、weekly_check.sh:启动时间因为系统中英文显示不准确、获取公网IP的方法、子网判断
+- #install_ovs、install_rabbitmq、install_erlang.sh:安装前提前备份系统文件
+- #check.sh、check_copy.sh:服务检查的方式修改
+- #daily_check.sh、weekly_check.sh:启动时间因为系统中英文显示不准确、获取公网IP的方法、子网判断
 5. 增加install-low.sh脚本centos8、centos steam 8、centos steam 9、rocky 9安装软件的方法
 6. 增加install-low.sh脚本检查之前环境是否已安装软件
 7. 增加install-low.sh脚本centos7可以选择安装mysql、php、jdk的版本
