@@ -1,4 +1,3 @@
-version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=" '{print $NF}'`
 ## 已测试系统(x86_64):
 -	Rocky 8
 -	Rocky 9
@@ -28,12 +27,12 @@ version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=
 9.	dstat、glances这两个工具好多系统会提示安装失败,多执行几次"ywtool install",如果还失败则需要离线安装
 10.	linux运维工具,只测试过x86_64,未测试过aarch64
 11.	工具功能介绍:https://blog.csdn.net/ShunqiziranZ/article/details/135844875
-- #############################################################################################################
+
 ## 未完成:
 1.	安全基线
 2.	将文本文件生成pdf文件脚本
 3.	集成一些安全工具
-- #############################################################################################################
+
 ## 2023.2.18之前
 1. 增加了SMTP配置
 2. 修改一些脚本文件
@@ -206,4 +205,3 @@ version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=
 25. 调整"install-service.sh"脚本CentOS Stream系统yum的配置
 26. 增加AlmaLinux 8.8系统对脚本的使用
 27. 调整"install-service.sh"脚本对Rocky9、BC-Linux8系统对部分软件的安装判断
-- #############################################################################################################
