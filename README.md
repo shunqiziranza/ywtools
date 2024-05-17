@@ -17,8 +17,8 @@ version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=
 -	BigCloud Enterprise Linux 8.1/8.2/8.4/8.6(移动,类似centos8,软件包是el8.x86_64)
 -	BigCloud Enterprise Linux 20.10/22.10(移动,类似centos8,软件包是oe1、oe2203.x86_64)
 ## 备注:
-1.	[AlmaLinux 8]、[CentOS Stream 8]、[Rocky 8/9]、[AnolisOS 8]、[BCLinux 8]等系统yum没有ntp软件包
-2.	[CentOS Stream 8]、[Rocky 9]等系统yum没有xinetd软件包
+1.	[AlmaLinux 8]、[CentOS Stream 8/9]、[Rocky 8/9]、[AnolisOS 8]、[BCLinux 8]等系统yum没有ntp软件包
+2.	[CentOS Stream 8/9]、[Rocky 9]等系统yum没有xinetd软件包
 3.	[AnolisOS 8]、[HCEulerOS 2.0]、[BCLinux 7/8]等系统无法安装rabbtimq(官网的安装脚本无法识别此系统)
 4.	[HCEulerOS 2.0]、[BCLinux 20.10/22.10]、[openEuler 20.03-LTS-SP3/22.03-LTS-SP1]等系统yum没有nmap-ncat(nc命令在nmap软件包)、epel-release这几个软件包
 5.	[HCEulerOS 2.0]、[BCLinux 20.10/22.10]、[openEuler 20.03-LTS-SP3/22.03-LTS-SP1]等系统没有redhat-release文件
@@ -206,4 +206,13 @@ version=`cat /usr/local/ywtools/config/config.ini  | grep ^"version=" | awk -F"=
 25. 调整"install-service.sh"脚本CentOS Stream系统yum的配置
 26. 增加AlmaLinux 8.8系统对脚本的使用
 27. 调整"install-service.sh"脚本对Rocky9、BC-Linux8系统对部分软件的安装判断
+28. 调整"install-service.sh"脚本CentOS_Stream系统yum的配置
+29. 调整"install-service.sh"脚本对yum原文件备份判断
+
+## 2024.4.2-2024.5.18
+1. 增加"system_login_info.sh"脚本,登录系统会先执行此脚本显示系统基本信息
+2. 调整所有脚本执行cp命令时用管理员权限:sudo
+3. 调整"install-service.sh"脚本对yum-utils的安装
+4. 增加"select_check.sh"对磁盘速度的读取、系统负载的读取
+5. 增加nginx代理脚本:"nginx_proxy_forwarding.sh"
 - #############################################################################################################
